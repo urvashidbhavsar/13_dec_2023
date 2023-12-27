@@ -1,0 +1,5 @@
+image map means apply link in image shape.
+
+shape : rectangle, circle, polygon 
+
+use <map> and <area> tag.
