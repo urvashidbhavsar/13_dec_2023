@@ -1,0 +1,17 @@
+as per html layout there is 2 type of tag. 
+
+(1) sementic tag => it is describe about thier effected.
+
+(2) non-sementic tag => which is nothing tell about effect.
+    (1) div 
+    (2) span 
+
+layout tag : 
+(1) header 
+(2) footer 
+(3) main 
+(4) nav 
+(5) section 
+(6) article 
+(7) aside 
+(8) div 

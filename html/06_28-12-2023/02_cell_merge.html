@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+       to give table title => <caption>
+
+        rowspan and colspan always apply in <td> and <th> tag
+        when we apply rowspan remove one cell from next each row.
+        when we apply colspan remove cell in that effected row.
+     -->
+    <table border="1" cellpadding="5px" rules="all">
+        <caption><em>A test table with merge cells</em></caption>
+        <!-- 1st row -->
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="2">Average</th>
+            <!-- <td>abc</td> -->
+            <th rowspan="2">Red Eyes</th>
+        </tr>
+        <!-- 2nd row -->
+        <tr>
+            <!-- <td>abc</td> -->
+            <th>Height</th>
+            <th>weight</th>
+            <!-- <td>abc</td> -->
+        </tr>
+        <!-- 3rd row -->
+        <tr>
+            <th>Male</th>
+            <td>1.9</td>
+            <td>0.003</td>
+            <td>40%</td>
+        </tr>
+        <!-- 4th row -->
+        <tr>
+            <th>Female</th>
+            <td>1.7</td>
+            <td>0.002</td>
+            <td>43%</td>
+        </tr>
+    </table>
+</body>
+
+</html>
