@@ -1,0 +1,31 @@
+what is css =>
+(1) is a cascading style sheet.
+(2) use to make a responsive design, animation, element transformation, setup 3d look, make a attrective design etc..
+
+types of css => 
+(1) css style file 
+(2) less style 
+(3) sass/scss style  
+
+how many ways to create/add css in html file : 
+(1) inline = using style attribute .
+(2) internal = using <style> tag in <head> or <body> section.
+(3) external = create an external file using .css extension and add in html file using <link> tag.
+
+syntax (rules) => 
+(1) inline => 
+    style = "property : value;"
+
+(2) internal/external =>
+    selector{
+        property:value;
+    }
+
+selector => 
+(1) element selector 
+(2) class selector
+(3) ID selector 
+(4) group selector 
+(5) universal selector 
+(6) attribute selector 
+(7) decendent selector (parent-child selection)
