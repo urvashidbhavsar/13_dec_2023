@@ -1,0 +1,9 @@
+in html there is 2 tags use for graphics : 
+(1) svg 
+(2) canvas 
+
+svg = scalable vector graphics 
+both tags are provide 2d graphics.
+create many shapes like, circle, polygon, rectangle, text, line, etc 
+
+canvas = give a draw area and create graphics with js code.
