@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            /* table-layout: fixed; */
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightseagreen;
+        }
+
+        tr:nth-child(odd) {
+            background-color: lightblue;
+        }
+
+        tr:first-child {
+            background-color: blue;
+            color: white;
+        }
+
+        tr:last-child {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <!-- 1st row -->
+        <tr>
+            <th>No.</th>
+            <th>Full Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+        </tr>
+        <!-- 2nd row -->
+        <tr>
+            <td>1</td>
+            <td>Bill Gates</td>
+            <td>Founder Microsoft</td>
+            <td>$1000</td>
+        </tr>
+        <!-- 3rd row -->
+        <tr>
+            <td>2</td>
+            <td>Steve Jobs</td>
+            <td>Founder Apple</td>
+            <td>$1200</td>
+        </tr>
+        <!-- 4th row -->
+        <tr>
+            <td>3</td>
+            <td>Larry Page</td>
+            <td>Founder Google</td>
+            <td>$1100</td>
+        </tr>
+        <!-- 5th row -->
+        <tr>
+            <td>4</td>
+            <td>Mark Zuckergerg</td>
+            <td>Founder Facebook</td>
+            <td>$1300</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Mark Zuckergerg</td>
+            <td>Founder Facebook</td>
+            <td>$1300</td>
+        </tr>
+    </table>
+    <button class="btn">click</button>
+</body>
+
+</html>
