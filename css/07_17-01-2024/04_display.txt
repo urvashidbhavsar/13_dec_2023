@@ -1,0 +1,13 @@
+display means how to show your content on webpage.
+
+
+display : none;
+display : block;
+display : inline;
+display : inline-block;
+display : flex;
+display : grid;
+display : inline-flex;
+display : inline-grid;
+display : table;
+

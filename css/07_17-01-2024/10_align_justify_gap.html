@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            height: 100px;
+            width: 100px;
+        }
+
+        .main {
+            border: 1px solid black;
+            display: flex;
+            /* center, flex-end, right, flex-start, left, space-between, space-evenly, space-around */
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .div1,
+        .div3,
+        .div5 {
+            background-color: brown;
+        }
+
+        .div4,
+        .div2 {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div div1">Div 1</div>
+        <div class="div div2">Div 2</div>
+        <div class="div div3">Div 3</div>
+        <div class="div div4">Div 4</div>
+        <div class="div div5">Div 5</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+when we apply display flex following property are used : 
+
+(1) flex-grow  (apply in child class)
+(2) flex-shrink (apply in child class)
+(3) flex-basis (apply in child class)
+(4) flex (apply in child class)
+(5) flex-direction 
+(6) fiex-wrap 
+(7) flex-flow 
+(8) order (apply in child class)
+(9) align-items
+(10) justify-content 
+(11) align-content 
+(12) gap 
