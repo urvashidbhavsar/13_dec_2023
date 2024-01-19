@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            border: 1px solid black;
+            display: flex;
+            gap: 10px;
+            /* flex-direction: row-reverse; */
+        }
+
+        .div1,
+        .div2,
+        .div3 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .div1 {
+            background-color: brown;
+            order: 3;
+        }
+
+        .div2 {
+            background-color: blueviolet;
+            order: 1;
+        }
+
+        .div3 {
+            background-color: cyan;
+            order: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div1">Div 1</div>
+        <div class="div2">Div 2</div>
+        <div class="div3">Div 3</div>
+    </div>
+</body>
+
+</html>
