@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 700px;
+            border: 1px solid black;
+            display: grid;
+            gap: 20px;
+            grid-template-areas: 'header header header header';
+        }
+
+        .main div {
+            height: 100px;
+            /* width: 100px; */
+            background-color: cadetblue;
+        }
+
+        .div1 {
+            display: grid;
+            grid-area: header;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div1">Header</div>
+        <div class="div2">main</div>
+        <div class="div3">nav</div>
+        <div class="div4">section</div>
+        <div class="div5">footer</div>
+    </div>
+</body>
+
+</html>

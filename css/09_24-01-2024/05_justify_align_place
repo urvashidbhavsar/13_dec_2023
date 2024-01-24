@@ -1,0 +1,14 @@
+justify = effected as horizontally 
+(1) justify-content => apply when we use flex and grid (parent)
+(2) justify-items => apply when we use grid, it is not effected in flex (parent)
+(3) justify-self => apply when we use grid,it is not effected in flex (child)
+
+align = effected as vertically 
+(1) align-content => use when we apply display flex and flex-wrap.  (parent)
+(2) align-items => apply when we use flex and grid (parent)
+(3) align-self =>  apply when we use grid (child)
+
+place = short hand of justify and align
+(1) place-content => short hand of justify-content and align-content 
+(2) place-items => short hand of justify-items and align-items
+(3) place-self  => short hand of justify-self and align-self

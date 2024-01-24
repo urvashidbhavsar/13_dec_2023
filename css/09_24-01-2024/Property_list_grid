@@ -1,0 +1,13 @@
+when we apply display grid following property used : 
+
+
+(1) grid-template-row 
+(2) grid-template-column 
+(3) gap 
+(4) justify-items 
+(5) align-items 
+(6) grid-row (grid-row-start, grid-row-end)
+(7) grid-column (grid-column-start,grid-column-end)
+(8) grid-area 
+(9) justify-self
+(10) align-self

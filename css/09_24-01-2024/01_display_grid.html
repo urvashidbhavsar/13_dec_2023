@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            /* set table form data. default set in row wise */
+            display: grid;
+            /* grid-template-columns: auto auto auto auto auto; */
+            /* grid-template-columns: 1fr 1fr 2fr 1fr 1fr; */
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .div {
+            height: 100px;
+            width: 100px;
+        }
+
+        .div:nth-child(even) {
+            background-color: brown;
+        }
+
+        .div:nth-child(odd) {
+            background-color: rgb(52, 99, 5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+    </div>
+</body>
+
+</html>
