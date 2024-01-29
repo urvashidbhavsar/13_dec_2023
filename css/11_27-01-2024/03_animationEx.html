@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .upper {
+            height: 200px;
+            width: 200px;
+            margin: 200px auto;
+        }
+
+        .main {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+            background: conic-gradient(rgb(173, 27, 27), rgb(120, 62, 62), rgb(205, 178, 178));
+            animation: moveCircle 6s linear infinite;
+            /* position: relative; */
+        }
+
+        .sub {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background-color: white;
+            display: grid;
+            place-content: center;
+        }
+
+        p {
+            position: absolute;
+            top: 284px;
+            left: 367px;
+        }
+
+        @keyframes moveCircle {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="upper">
+        <div class="main">
+            <div class="sub"></div>
+        </div>
+        <p>Loading</p>
+    </div>
+</body>
+
+</html>

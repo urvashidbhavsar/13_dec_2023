@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(39, 39, 39);
+        }
+
+        .animate_main {
+            height: 250px;
+            width: 250px;
+            margin: 150px auto;
+        }
+
+        .div {
+            height: 70px;
+            width: 70px;
+        }
+
+        .upperdiv {
+            height: 125px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .lowerdiv {
+            height: 125px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .div1 {
+            background-color: blueviolet;
+            animation: firstDiv 2s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
+        }
+
+        .div2 {
+            background-color: chocolate;
+            animation: secondDiv 2s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
+        }
+
+        .div3 {
+            background-color: crimson;
+            animation: thirdDiv 2s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
+        }
+
+        .div4 {
+            background-color: darkcyan;
+            animation: fourthDiv 2s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
+        }
+
+        @keyframes firstDiv {
+
+            25% {
+                transform: translateX(180px);
+                border-radius: 0;
+            }
+
+            50% {
+                transform: translateX(180px) translateY(180px);
+                border-radius: 50%;
+            }
+
+            75% {
+                transform: translateX(180px) translateY(180px) translateX(-180px);
+                border-radius: 50%;
+            }
+
+            100% {
+                transform: translateX(180px) translateY(180px) translateX(-180px) translateY(-180px);
+                border-radius: 0%;
+            }
+        }
+
+        @keyframes secondDiv {
+
+            25% {
+                transform: translateY(180px);
+                border-radius: 50%;
+            }
+
+            50% {
+                transform: translateY(180px) translateX(-180px);
+                border-radius: 0;
+            }
+
+            75% {
+                transform: translateY(180px) translateX(-180px) translateY(-180px);
+                border-radius: 0;
+            }
+
+            100% {
+                transform: translateY(180px) translateX(-180px) translateY(-180px) translateX(180px);
+                border-radius: 50%;
+            }
+        }
+
+        @keyframes thirdDiv {
+
+            25% {
+                transform: translateY(-180px);
+                border-radius: 50%;
+            }
+
+            50% {
+                transform: translateY(-180px) translateX(180px);
+                border-radius: 0;
+            }
+
+            75% {
+                transform: translateY(-180px) translateX(180px) translateY(180px);
+                border-radius: 0;
+            }
+
+            100% {
+                transform: translateY(-180px) translateX(180px) translateY(180px) translateX(-180px);
+                border-radius: 50%;
+            }
+        }
+
+        @keyframes fourthDiv {
+
+            25% {
+                transform: translateX(-180px);
+                border-radius: 0;
+            }
+
+            50% {
+                transform: translateX(-180px) translateY(-180px);
+                border-radius: 50%;
+            }
+
+            75% {
+                transform: translateX(-180px) translateY(-180px) translateX(180px);
+                border-radius: 50%;
+            }
+
+            100% {
+                transform: translateX(-180px) translateY(-180px) translateX(180px) translateY(180px);
+                border-radius: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animate_main">
+        <div class="upperdiv">
+            <div class="div div1"></div>
+            <div class="div div2"></div>
+        </div>
+        <div class="lowerdiv">
+            <div class="div div3"></div>
+            <div class="div div4"></div>
+        </div>
+    </div>
+</body>
+
+</html>
