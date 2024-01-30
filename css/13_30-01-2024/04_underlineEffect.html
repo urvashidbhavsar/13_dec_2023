@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .main a {
+            color: blue;
+            font-size: 40px;
+            text-decoration: none;
+        }
+
+        .main .link::after {
+            content: "";
+            height: 3px;
+            width: 100%;
+            background-color: red;
+            display: block;
+            transition: 1s ease;
+        }
+
+        .main .link1::after {
+            transform: scale(0);
+        }
+
+        .main .link1:hover::after {
+            transform: scale(1);
+        }
+
+        .main .link2::after {
+            transform: scaleY(0);
+        }
+
+        .main .link2:hover::after {
+            transform: scaleY(1);
+        }
+
+        .main .link3::after {
+            transform: scaleX(0);
+        }
+
+        .main .link3:hover::after {
+            transform: scaleX(1);
+        }
+
+        .main .link4::after {
+            transform: scaleX(0);
+            /* transform-origin: 0% 100%; */
+            transform-origin: 100% 0%;
+        }
+
+        .main .link4:hover::after {
+            transform: scaleX(1);
+        }
+
+        .main .link5::after {
+            transform: translateY(-5px);
+        }
+
+        .main .link5:hover::after {
+            transform: translateY(0);
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: 2px solid royalblue;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn a {
+            color: royalblue;
+        }
+
+        .btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: royalblue;
+            transform: scale(0);
+            transform-origin: 100% 100%;
+            transition: 0.5s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::after {
+            transform: scale(1);
+        }
+
+        .btn:hover a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <a href="" class="link link1">click here</a>
+        </div>
+        <div>
+            <a href="" class="link link2">click here</a>
+        </div>
+        <div>
+            <a href="" class="link link3">click here</a>
+        </div>
+        <div>
+            <a href="" class="link link4">click here</a>
+        </div>
+        <div>
+            <a href="" class="link link5">click here</a>
+        </div>
+        <div class="inner">
+            <div class="btn">
+                <a href="" class="link6">click to read</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .SlideEffect {
+            height: auto;
+            width: 400px;
+            border: 2px solid black;
+            position: relative;
+            font-family: cursive;
+            overflow: hidden;
+        }
+
+        .SlideEffect img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .SlideEffect .SlideText {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: white;
+            display: grid;
+            place-content: center;
+            height: 100%;
+            width: 100%;
+            transition: 1s ease-in-out;
+        }
+
+        .SlideEffect:hover .SlideText {
+            background-color: rgba(0, 0, 0, 0.849);
+        }
+
+        .SlideEffect .textdelay {
+            transform: scale(0);
+            transition: 1s ease;
+        }
+
+        .SlideEffect:hover .textdelay {
+            transform: scale(1);
+            transition-delay: 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- zoom Effect -->
+    <div class="SlideEffect">
+        <div>
+            <img src="https://motoringworld.in/wp-content/uploads/2020/04/KAR_0223-copy.jpg" alt="">
+        </div>
+        <div class="SlideText">
+            <div class="textdelay">
+                <h1>Activa</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
