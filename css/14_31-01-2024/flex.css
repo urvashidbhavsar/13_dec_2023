@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+/* =================== */
+.BestInt{
+    background-color: lavender;
+}
+.BestInt .flexContainer{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.BestInt .BestP{
+    padding: 30px;
+}
+.BestInt .leftimg{
+    flex: 1;
+}
+.BestInt .leftimg img{
+    max-width: 100%;
+    height: auto;
+}
+.BestInt .rightText{
+    flex: 1;
+    padding: 30px;
+}
+.BestInt .title{
+    background-color: #9c57dc;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+}
+.BestInt h1{
+    font-size: calc(2vw + 1.5rem);
+    /* font-size: 40px; */
+    padding: 10px 0;
+}
+.BestInt .info{
+    color: gray;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+.BestInt button{
+    padding:10px 30px;
+    border: 2px solid #9c57dc;
+    color: #9c57dc;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+@media (max-width:576px) {
+    .BestInt .flexContainer{
+        flex-direction: column;
+    }
+    .BestInt .rightText{
+        padding: 0;
+    }
+}
+@media (min-width:576px) {
+    .BestInt .flexContainer{
+        flex-direction: column;
+    }
+    .BestInt .rightText{
+        padding: 0;
+    }
+}
+@media (min-width:768px) {
+    /* inherit values  */
+}
+@media (min-width:992px) {
+    .BestInt .flexContainer{
+        flex-direction: row;
+    }
+    .BestInt .rightText{
+        padding: 30px;
+    }
+}

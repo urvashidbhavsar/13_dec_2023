@@ -1,0 +1,10 @@
+use to make a responsive website.
+
+breakpoints 
+(1) mobile device           max-width:576px 
+(2) mobile device (fold)    min-width:576px
+(3) tablet device           min-width:768px 
+(4) mini leptop             min-width:992px 
+(5) normal leptop           min-width:1200px = 1140
+(6) large screen            min-width:1400px  
+

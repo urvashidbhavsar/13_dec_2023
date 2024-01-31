@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        h1::before {
+            content: "";
+            height: 3px;
+            width: 150px;
+            /* background-color: red; */
+            background: linear-gradient(to left, red, green, blue);
+            display: inline-block;
+            margin: 8px 5px;
+        }
+
+        h1::after {
+            content: "";
+            height: 3px;
+            width: 150px;
+            /* background-color: red; */
+            background: linear-gradient(to right, red, green, blue);
+            display: inline-block;
+            margin: 8px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>about us</h1>
+</body>
+
+</html>
