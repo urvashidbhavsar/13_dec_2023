@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+// less = leaner stylesheet
+// link with <link> tag
+// copy script cdn from less website 
+
+
+// less variable 
+// any name given start with @
+@mwidth:1200px;
+@pb-20:20px;
+// mixin
+.txtCenter{
+    text-align: center;
+}
+.container{
+    max-width: @mwidth;
+    margin: auto;
+    padding: 0px 10px;
+}
+
+// ===========================================
+.lessExample{
+    background-color: azure;
+
+    .padd{
+        padding: 50px 0;
+    }
+    .title{
+        font-size: 30px;
+        padding-bottom:@pb-20;
+    }
+    .projImg{
+        background-image: url(https://p.w3layouts.com/demos_new/template_demo/28-03-2020/interiorfloor-liberty-demo_Free/1147492347/web/assets/images/slide4.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 100px;
+        position: relative;
+        z-index: 1;
+        // call mixin
+        .txtCenter();
+
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        h2{
+            color: white;
+            font-size: 35px;
+           padding-bottom: @pb-20;
+           .txtCenter();
+        }
+        p{
+            width: 600px;
+            margin: auto;
+            line-height: 30px;
+            color: white;
+            padding-bottom: @pb-20;
+            .txtCenter()
+        }
+        .btn{
+            padding: 10px 30px;
+            color: white;
+            background-color: magenta;
+            border: 1px solid magenta;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+// scss variable 
+// any name given start with $
+$mxwidth:1200px;
+$p-20:20px;
+// mixin
+@mixin align($align:center){
+    text-align: center;
+}
+
+.container{
+    max-width: $mxwidth;
+    margin: auto;
+    padding: 0px 10px;
+}
+
+// ===========================================
+.lessExample{
+    background-color: azure;
+
+    .padd{
+        padding: 50px 0;
+    }
+    .title{
+        font-size: 30px;
+        padding-bottom:$p-20;
+    }
+    .projImg{
+        background-image: url(https://p.w3layouts.com/demos_new/template_demo/28-03-2020/interiorfloor-liberty-demo_Free/1147492347/web/assets/images/slide4.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 100px;
+        position: relative;
+        z-index: 1;
+        // call mixin
+        @include align();
+
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        h2{
+            color: white;
+            font-size: 35px;
+           padding-bottom: $p-20;
+        }
+        p{
+            width: 600px;
+            margin: auto;
+            line-height: 30px;
+            color: white;
+            padding-bottom:$p-20;
+        }
+        .btn{
+            padding: 10px 30px;
+            color: white;
+            background-color: magenta;
+            border: 1px solid magenta;
+            border-radius: 5px;
+        }
+    }
+}

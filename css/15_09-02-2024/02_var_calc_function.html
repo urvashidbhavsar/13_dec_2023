@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css var() use to make code easy */
+        :root {
+            --h-auto: auto;
+            --w-250: 450px;
+            --border-w-2: 2px;
+            --border-st-solid: solid;
+            --border-clr-blk: black;
+            --p-20: 20px;
+            --f-s-25: calc(0.3rem + 2vw);
+        }
+
+        .mydiv {
+            height: var(--h-auto);
+            width: var(--w-250);
+            border-width: var(--border-w-2);
+            border-style: var(--border-st-solid);
+            border-color: var(--border-clr-blk);
+            padding: var(--p-20);
+            font-size: var(--f-s-25);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere expedita natus labore laboriosam, nulla eligendi
+        tempora nihil fuga, nobis nisi eum aliquam? Facere, autem officia tenetur odit dolorum nobis sint!
+    </div>
+</body>
+
+</html>
