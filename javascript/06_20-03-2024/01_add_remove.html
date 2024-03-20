@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head1 {
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: blue;
+            border: 1px solid blue;
+            padding: 5px;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="setCss()">Add Css</button>
+    <button onclick="removeCss()">Remove Css</button>
+    <button onclick="toggleCss()">Toggle Css</button>
+    <hr>
+    <h1 class="title1">add/remove css</h1>
+    <h1 class="title2">toggle css</h1>
+
+    <script>
+        function setCss() {
+            let h1 = document.querySelector(".title1")
+            h1.classList.add("head1")
+        }
+        function removeCss() {
+            let h1 = document.querySelector(".title1")
+            h1.classList.remove("head1")
+        }
+        function toggleCss() {
+            let h1 = document.querySelector(".title2");
+            h1.classList.toggle("head1")
+        }
+    </script>
+</body>
+
+</html>

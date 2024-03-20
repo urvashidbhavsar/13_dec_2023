@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .newtitle {
+            font-size: 45px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="" onclick="changeCss()">click here</button>
+
+    <h1 class="title" id="title">Hello world</h1>
+
+    <script>
+        function changeCss() {
+            let h1 = document.querySelector("#title");
+            if (h1.className == "title") {
+                h1.className = "newtitle"
+            } else {
+                h1.className = "title"
+            }
+        }
+    </script>
+</body>
+
+</html>

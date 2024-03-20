@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="checkClass()">contains</button>
+
+    <p class="mypara">hello world</p>
+    <script>
+        function checkClass() {
+            let para = document.querySelector("p");
+            if (para.classList.contains("mypara") == true) {
+                alert("class exist")
+            } else {
+                alert("class not exist")
+            }
+        }
+    </script>
+</body>
+
+</html>
