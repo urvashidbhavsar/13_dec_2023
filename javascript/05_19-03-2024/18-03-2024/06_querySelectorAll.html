@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div"></div>
+    <div class="div"></div>
+    <div class="div"></div>
+    <div class="div"></div>
+
+    <script>
+        var mydiv = document.querySelectorAll(".div");
+        for (let i = 0; i < mydiv.length; i++) {
+            mydiv[i].innerHTML = "Hello user"
+        }
+    </script>
+
+    <button onclick="selectVal()">select</button>
+    <div class="parent">
+        <div class="child">child selector</div>
+    </div>
+
+    <script>
+        function selectVal() {
+            var select = document.querySelectorAll(".parent .child");
+            for (let i = 0; i < select.length; i++) {
+                alert(select.length)
+                select[i].style.color = "red"
+            }
+        }
+    </script>
+</body>
+
+
+</html>
