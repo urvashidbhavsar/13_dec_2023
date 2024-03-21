@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myptn {
+            margin-top: 30px;
+            height: auto;
+            width: 300px;
+            border: 1px solid black;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="">Enter Number of pattern : </label>
+        <input type="number" name="" id="num">
+    </div>
+    <div>
+        <button onclick="displayPattern()">Display</button>
+    </div>
+
+    <div class="myptn"></div>
+
+    <script>
+        function displayPattern() {
+            let n = document.getElementById("num").value;
+            let ptn = document.querySelector(".myptn");
+            let i, j;
+            // row
+            debugger
+            for (i = 1; i <= n; i++) {
+                let res = "";
+                // column
+                for (j = 0; j < i; j++) {
+                    res = res + "<span>*</span>"
+                }
+                var div = document.createElement("div");
+                div.innerHTML = `<div>${res}</div>`
+                ptn.append(div)
+            }
+            document.getElementById("num").value = "";
+        }
+    </script>
+</body>
+
+</html>
