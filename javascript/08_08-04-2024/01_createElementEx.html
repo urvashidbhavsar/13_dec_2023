@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="userinput">
+        <label for="cityname">Enter city name : </label>
+        <input type="text" name="city_name" id="cityname">
+    </div>
+    <div>
+        <button onclick="AddUserVal()">Add</button>
+    </div>
+    <div>
+        <label for="mylist">Your List : </label>
+        <select name="" id="mylist" style="width: 200px;">
+            <option value="">---select---</option>
+        </select>
+    </div>
+    <script>
+        function AddUserVal() {
+            let city = document.getElementById("cityname").value;
+            let option = document.createElement("option");
+            let list = document.getElementById("mylist");
+            // let option_text = document.createTextNode(city);
+            // option.append(option_text);
+            option.text = city;
+            list.add(option)
+            // list.appendChild(option);
+            document.getElementById("cityname").value = ""
+        }
+    </script>
+</body>
+
+</html>

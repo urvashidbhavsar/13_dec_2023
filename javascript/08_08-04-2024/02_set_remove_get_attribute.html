@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .newimg {
+            width: 500px;
+            border: 5px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="set_attr()">set attribute</button>
+    <button onclick="remove_attr()">remove attribute</button>
+    <button onclick="get_attr()">Get attribute</button>
+    <hr>
+    <img src="https://cdn.create.vista.com/api/media/small/1571279/stock-photo-eifell-tower-in-paris-france" alt=""
+        id="myimg">
+
+    <script>
+        let set_attr = () => {
+            let img = document.getElementById("myimg")
+            // img.setAttribute("width", "300px")
+            // img.setAttribute("style", "width:500px; border:1px solid red")
+            img.setAttribute("class", "newimg")
+        }
+        function remove_attr() {
+            let img = document.getElementById("myimg")
+            img.removeAttribute("class", "newimg")
+        }
+        function get_attr() {
+            let img = document.getElementById("myimg")
+            let newimg = img.getAttribute("src")
+            alert(newimg.toString())
+        }
+    </script>
+</body>
+
+</html>
