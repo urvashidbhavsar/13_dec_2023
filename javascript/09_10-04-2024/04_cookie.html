@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cookieData()">show</button>
+    <script>
+        document.cookie = "username=divyesh;max-age= " + (60 * 60 * 24 * 180)
+        function cookieData() {
+            document.cookie = "username=divyesh;max-age= " + (60 * 60 * 24 * 180)
+            alert(document.cookie);
+        }
+    </script>
+</body>
+
+</html>

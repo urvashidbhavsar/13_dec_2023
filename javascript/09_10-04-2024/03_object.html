@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tbody>
+            <th>Object Key</th>
+            <th>Obkect Value</th>
+        </tbody>
+        <tbody id="data"></tbody>
+    </table>
+
+    <script>
+        let userdata = document.getElementById("data")
+        var person = {
+            firstname: "Raj",
+            lastname: "Patel",
+            mobileno: 9432222131,
+            doB: "12-2-2000"
+        }
+        console.log(person);
+        // to print single object value
+        // document.write(`${person.firstname} ${person.lastname}`)
+
+        // print an object values
+        let per;
+        for (per in person) {
+            if (Object.hasOwnProperty.call(person, per)) {
+                console.log(`${per} => ${person[per]}`);
+                // document.write(`<div>${per} => ${person[per]}</div>`)
+                userdata.innerHTML += `<tr>
+                    <td>${per}</td>
+                    <td>${person[per]}</td>
+                    </tr>`
+            }
+        }
+    </script>
+</body>
+
+</html>

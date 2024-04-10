@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var furniture = ["chair", "table", "cupboard"];
+        console.log(furniture);
+        document.write(furniture)
+
+        // single array print
+        console.log(furniture[0]);
+        furniture.push("Bed")
+        console.log(furniture);
+        // furniture.pop();
+        // console.log(furniture);
+
+        // print array value using for..of loop 
+        for (const fur of furniture) {
+            console.log(fur);
+        }
+
+        // print array using for loop
+        for (let i = 0; i < furniture.length; i++) {
+            console.log(`${i} => ${furniture[i]}`);
+        }
+
+        // print array using foreach loop
+        furniture.forEach(fur => {
+            console.log(fur);
+        });
+
+    </script>
+</body>
+
+</html>
