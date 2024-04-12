@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="#">
+        <div class="userform">
+            <div class="row">
+                <div>Mobile No</div>
+                <div>
+                    <input type="text" name="num" id="no" onblur="return checkno()" onkeyup="return checkUserNoEx()"
+                        maxlength="10">
+                    <div>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return checkno()">Click Here</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function checkno() {
+            let no = document.getElementById("no");
+            if (no.value == "") {
+                document.getElementById("msg").innerText = "Enter mobile no";
+                no.classList.add("error");
+                no.focus()
+            }
+            return false
+        }
+        function checkUserNoEx() {
+            let no = document.getElementById("no");
+            let noptn = /^[0-9]*$/;
+            let nost = /^[6-9]/
+            if (!(noptn.test(no.value))) {
+                document.getElementById("msg").innerHTML = "Invalid Number!!!"
+                no.classList.add("error")
+            } else if (!(nost.test(no.value))) {
+                document.getElementById("msg").innerHTML = "Number start with 6-9."
+                no.classList.add("error")
+            } else if (no.value.length < 10) {
+                document.getElementById("msg").innerHTML = "Enter 10 digits"
+                no.classList.add("error")
+            } else {
+                document.getElementById("msg").innerHTML = ""
+                no.classList.remove("error")
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

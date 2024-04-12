@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="#">
+        <div class="userform">
+            <div class="row">
+                <div>Name</div>
+                <div>
+                    <input type="text" name="uname" id="username" onblur="return checkUserName()"
+                        onkeyup="return checkUserEx()" maxlength="50">
+                    <div>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return checkUserName()">Click Here</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function checkUserName() {
+            let user = document.getElementById("username");
+            if (user.value == "") {
+                document.getElementById("msg").innerText = "Enter name";
+                user.classList.add("error");
+                user.focus()
+            }
+            return false
+        }
+        function checkUserEx() {
+            let user = document.getElementById("username");
+            let ptn = /^[a-zA-Z.\s]*$/
+            // if we have multiple conditions. always true set in else section.
+            if (!(ptn.test(user.value))) {
+                document.getElementById("msg").innerHTML = "Invalid value!!!"
+                user.classList.add("error")
+            } else if (user.value.length < 6) {
+                document.getElementById("msg").innerHTML = "Required minimum 6 letters"
+            } else {
+                document.getElementById("msg").innerHTML = ""
+                user.classList.remove("error")
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>
