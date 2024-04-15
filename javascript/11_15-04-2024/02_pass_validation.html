@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="#">
+        <div class="userform">
+            <div class="row">
+                <div>Password</div>
+                <div>
+                    <input type="text" name="pwd" id="pass" onblur="return PasswordCheck()"
+                        onkeyup="return checkpassPtn()">
+                    <div>
+                        <span id="msg1"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>Re-enter Password</div>
+                <div>
+                    <input type="text" name="rpwd" id="rpass" onkeyup="return comparePass()">
+                    <div>
+                        <span id="msg2"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return PasswordCheck()">Click Here</button>
+                </div>
+            </div>
+            <div class="row">
+                <div></div>
+                <p>note : password first letter must be capital. password contains uppercase, lowercase number and
+                    special symbols like(. $ % @)</p>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function PasswordCheck() {
+            let pass = document.getElementById("pass");
+            let rpass = document.getElementById("rpass");
+            if (pass.value == "") {
+                document.getElementById("msg1").innerText = "Enter Password";
+                pass.classList.add("error");
+                pass.focus()
+            }
+            if (rpass.value == "") {
+                document.getElementById("msg2").innerHTML = "Enter same Password";
+                rpass.classList.add("error")
+            }
+            return false
+        }
+        function checkpassPtn() {
+            let pass = document.getElementById("pass");
+            // let passptn = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+            let passptn = /^[A-Z][a-z0-9.\.@$%]{6,10}/
+            if (passptn.test(pass.value)) {
+                document.getElementById("msg1").innerHTML = ""
+                pass.classList.remove("error")
+            } else {
+                document.getElementById("msg1").innerHTML = "Invalid password!!!"
+                pass.classList.add("error")
+            }
+        }
+        function comparePass() {
+            let pass = document.getElementById("pass");
+            let rpass = document.getElementById("rpass");
+            if (rpass.value != pass.value) {
+                document.getElementById("msg2").innerHTML = "Password not match"
+                rpass.classList.add("error")
+            } else {
+                document.getElementById("msg2").innerHTML = ""
+                rpass.classList.remove("error")
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

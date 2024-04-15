@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="#">
+        <div class="userform">
+            <div class="row">
+                <div>Gender</div>
+                <div>
+                    <input type="radio" name="gen" id="male" onblur="return validate()">
+                    <label for="">Male</label>
+                    <input type="radio" name="gen" id="female">
+                    <label for="">Female</label>
+                    <div>
+                        <span id="msg1"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>ID Proof</div>
+                <div>
+                    <input type="checkbox" name="Voter" id="c1" onblur="return validate()">
+                    <label for="">Voter ID</label>
+                    <input type="checkbox" name="Pancard" id="c2">
+                    <label for="">Pancard</label>
+                    <input type="checkbox" name="Adhar" id="c3">
+                    <label for="">Adhar Card</label>
+                    <div>
+                        <span id="msg2"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>Residencial Proof</div>
+                <div>
+                    <select name="" id="userp" onblur="return validate()">
+                        <option value="-1">---select---</option>
+                        <option value="">Light bill</option>
+                        <option value="">House Tax</option>
+                        <option value="">Gas Bill</option>
+                    </select>
+                    <div>
+                        <span id="msg3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return validate()">Click Here</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function validate() {
+            let m = document.getElementById("male");
+            let f = document.getElementById("female")
+            if (m.checked == false && f.checked == false) {
+                document.getElementById("msg1").innerHTML = "Select value!!!"
+            } else {
+                document.getElementById("msg1").innerHTML = ""
+            }
+
+            let c1 = document.getElementById("c1");
+            let c2 = document.getElementById("c2");
+            let c3 = document.getElementById("c3");
+            if (c1.checked == false && c2.checked == false && c3.checked == false) {
+                document.getElementById("msg2").innerHTML = "Select value!!!"
+            } else {
+                document.getElementById("msg2").innerHTML = ""
+            }
+
+            let drop = document.getElementById("userp");
+            if (drop.value == "-1") {
+                document.getElementById("msg3").innerHTML = "Select value!!!"
+            } else {
+                document.getElementById("msg3").innerHTML = ""
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

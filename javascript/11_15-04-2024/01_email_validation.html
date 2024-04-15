@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="#">
+        <div class="userform">
+            <div class="row">
+                <div>Email</div>
+                <div>
+                    <input type="text" name="email" id="mail" onblur="return checkEmail()"
+                        onkeyup="return checkEmailPtn()">
+                    <div>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return checkEmail()">Click Here</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function checkEmail() {
+            let email = document.getElementById("mail");
+            if (email.value == "") {
+                document.getElementById("msg").innerText = "Enter email";
+                email.classList.add("error");
+                email.focus()
+            }
+            return false
+        }
+        function checkEmailPtn() {
+            let email = document.getElementById("mail");
+            // let ptn = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})/
+            // let ptn = /^\S+@\S+\.\S+$/
+            let ptn = /^[a-zA-Z0-9.\.]*@[a-zA-Z]*\.([a-z]{2,3})/
+            if (ptn.test(email.value)) {
+                document.getElementById("msg").innerHTML = ""
+            } else {
+                document.getElementById("msg").innerHTML = "Invalid email !!!!"
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>
