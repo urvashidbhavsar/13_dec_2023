@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: auto;
+            width: 500px;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 100px auto;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            padding: 5px 0;
+        }
+
+        input[type="text"] {
+            height: 20px;
+            width: 90%;
+            border: 1px solid gray;
+            padding: 0 5px;
+        }
+
+        input[type="text"]:focus-visible {
+            outline: none;
+        }
+
+        .error {
+            border: 1px solid red !important;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div class="main">
+            <div class="row">
+                <div>First Name : </div>
+                <div>
+                    <input type="text" name="" id="fname" onblur="return checkNameField('fname','msg1')"
+                        onkeyup="return namePattern('fname', 'msg1')" class="textfield">
+                </div>
+                <div>
+                    <span id="msg1"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>Middle Name : </div>
+                <div>
+                    <input type="text" name="" id="mname" onblur="return checkNameField('mname','msg2')"
+                        onkeyup="return namePattern('mname', 'msg2')" class="textfield">
+                </div>
+                <div>
+                    <span id="msg2"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>Last Name : </div>
+                <div>
+                    <input type="text" name="" id="lname" onblur="return checkNameField('lname','msg3')"
+                        onkeyup="return namePattern('lname', 'msg3')" class="textfield">
+                </div>
+                <div>
+                    <span id="msg3"></span>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        var inputs = document.getElementsByClassName("textfield");
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener("input", function () {
+                this.value = this.value.toUpperCase();
+            });
+        }
+
+        function checkNameField(blank, msg) {
+            let input = document.getElementById(blank)
+            if (input.value == "") {
+                document.getElementById(msg).innerHTML = "Enter value!!!"
+                input.classList.add("error")
+            }
+            return false;
+        }
+
+        function namePattern(ptncheck, msg) {
+            let ptninput = document.getElementById(ptncheck);
+            let ptn = /^[a-zA-Z]*$/;
+            if (!(ptn.test(ptninput.value))) {
+                document.getElementById(msg).innerHTML = "Invalid Name!!!"
+                ptninput.classList.add("error")
+            } else {
+                document.getElementById(msg).innerHTML = ""
+                ptninput.classList.remove("error")
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

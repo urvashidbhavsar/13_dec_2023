@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = "Hello User, welcome";// => index 0 to 9 total length => 10
+        console.log(str.charAt(3));
+        console.log(str.charCodeAt(6));
+        console.log(str.concat("!!!!"));
+        console.log(str.indexOf('l'));
+        console.log(str.lastIndexOf('l'));
+        console.log(str.search("welcome"));
+        console.log(str.match("User"));
+        console.log(str.replace("User", "World"));
+        // 2 is position index, 9 is length
+        console.log(str.substr(2, 9));
+        // index start 2 to 9
+        console.log(str.substring(2, 9));
+        console.log(str.slice(2, 9));
+
+        console.log(str.toUpperCase());
+        console.log(str.toLocaleUpperCase());
+        console.log(str.toLowerCase());
+        console.log(str.toLocaleLowerCase());
+
+        console.log(str.toString());
+        console.log(str.valueOf());
+
+        // as per statement 
+        console.log(str.split(" "));
+        str = "             user              "
+        console.log(str);
+        console.log(str.trim());
+    </script>
+</body>
+
+</html>
