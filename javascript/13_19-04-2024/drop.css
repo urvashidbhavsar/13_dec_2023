@@ -1,0 +1,54 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.list {
+    background-color: olivedrab;
+}
+
+.list .navbar {
+    display: flex;
+    gap    : 30px;
+    padding: 10px 0;
+}
+
+.list .navbar li {
+    padding: 10px;
+}
+
+.list .navbar li a {
+    color    : white;
+    font-size: 20px;
+}
+
+.list .navbar .dropdown {
+    position: relative;
+}
+
+.list .navbar .dropdown .menu {
+    display         : none;
+    position        : absolute;
+    padding         : 10px;
+    border-radius   : 5px;
+    background-color: white;
+    box-shadow      : 0 0 5px gainsboro;
+    top             : 43px;
+}
+
+.list .navbar .dropdown .ShowMenu {
+    display: block;
+}
+
+.list .navbar .dropdown .menu a {
+    color: black;
+}

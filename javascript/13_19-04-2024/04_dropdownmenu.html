@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="drop.css">
+</head>
+
+<body>
+    <div class="list">
+        <ul class="navbar">
+            <li><a href="">Home</a></li>
+            <li><a href="">Services</a></li>
+            <li class="dropdown">
+                <a href="#" onclick="drop()">Account</a>
+                <ul class="menu">
+                    <li><a href="">Register</a></li>
+                    <li><a href="">Login</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" onclick="drop()">Blog</a>
+                <ul class="menu">
+                    <li><a href="">My Blog</a></li>
+                    <li><a href="">Blog Post</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function drop() {
+            let resmenu = document.querySelector(".menu");
+            resmenu.classList.toggle("ShowMenu")
+        }
+    </script>
+</body>
+
+</html>
