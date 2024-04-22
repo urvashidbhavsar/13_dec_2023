@@ -1,0 +1,156 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width    : 1140px;
+    margin       : auto;
+    padding-left : 8px;
+    padding-right: 8px;
+}
+
+.ptb-1 {
+    padding-top   : 10px;
+    padding-bottom: 10px;
+}
+
+header {
+    background-color: transparent;
+    position        : fixed;
+    top             : 0;
+    width           : 100%;
+    z-index         : 1111;
+    transition      : 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) background-color;
+}
+
+.headerFixed {
+    background-color: darkcyan;
+    animation       : move 0.4s ease-in-out;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-50px);
+    }
+}
+
+header .navbar {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+header .navbar .logo a {
+    color: white;
+}
+
+header .navbar .nav ul {
+    display    : flex;
+    align-items: center;
+    gap        : 30px;
+}
+
+header .navbar .nav ul li {
+    padding: 5px;
+}
+
+header .navbar .nav ul li a {
+    color: white;
+}
+
+header .navbar .togglebtn {
+    display: none;
+}
+
+header .navbar .togglebtn .btn {
+    cursor       : pointer;
+    height       : 30px;
+    width        : 30px;
+    font-size    : 20px;
+    background   : transparent;
+    border       : 2px solid white;
+    border-radius: 4px;
+    color        : white;
+}
+
+header .navbar .togglebtn .btn:active {
+    box-shadow: 0 0 5px white;
+    scale     : 0.9;
+}
+
+img {
+    width : 100%;
+    height: 800px;
+    filter: brightness(50%);
+}
+
+
+/* create a replace class to display nav class */
+header .navbar .nav-show {
+    flex-basis      : 100%;
+    background-color: darkcyan;
+}
+
+header .navbar .nav-show ul {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    gap           : 10px;
+}
+
+@media (max-width:576px) {
+    header .navbar .nav {
+        display: none;
+    }
+
+    header .navbar .togglebtn {
+        display: block;
+    }
+
+    header .navbar .nav-show {
+        display: block;
+    }
+}
+
+@media (min-width:576px) {
+    header .navbar .nav {
+        display: none;
+    }
+
+    header .navbar .togglebtn {
+        display: block;
+    }
+
+    header .navbar .nav-show {
+        display: block;
+    }
+}
+
+@media (min-width:992px) {
+    header .navbar .nav {
+        display: block;
+    }
+
+    header .navbar .togglebtn {
+        display: none;
+    }
+}

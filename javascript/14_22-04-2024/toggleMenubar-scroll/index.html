@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Menubar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container ptb-1">
+            <div class="navbar">
+                <div class="logo">
+                    <h1><a href="">Logo</a></h1>
+                </div>
+                <div class="togglebtn">
+                    <button class="btn" onclick="showMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav">
+        <div class="closebtn">
+            <button class="btn" onclick="closeMenu()">
+                <i class="fa-solid fa-close"></i>
+            </button>
+        </div>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Blog</a></li>
+        </ul>
+    </div>
+
+    <section>
+        <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+            alt="">
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
