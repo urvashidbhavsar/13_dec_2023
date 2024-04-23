@@ -1,0 +1,59 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+.slider-show {
+    max-width: 100%;
+    position : relative;
+}
+
+.slider {
+    display: none;
+}
+
+img {
+    height         : 600px;
+    width          : 100%;
+    object-position: center;
+    object-fit     : cover;
+    position       : absolute;
+}
+
+
+.next,
+.prev {
+    position        : absolute;
+    font-size       : 45px;
+    color           : white;
+    background-color: black;
+    padding         : 15px;
+    cursor          : pointer;
+}
+
+.prev {
+    left: 0;
+    top : 230px;
+}
+
+.next {
+    top  : 230px;
+    right: 0;
+}
+
+/* for fade effect */
+.fade {
+    animation-name    : setfade;
+    animation-duration: 1.5s;
+}
+
+@keyframes setfade {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
